@@ -62,7 +62,7 @@ def compute_metrics(all_trues, all_scores, threshold=0.5):
     all_preds = (all_scores >= threshold)
 
     acc = metrics.accuracy_score(all_trues, all_preds)
-    pre = metrics.average_precision_score(all_trues, all_preds)
+    pre = metrics.precision_score(all_trues, all_preds)
     rec = metrics.recall_score(all_trues, all_preds)
     f1 = metrics.f1_score(all_trues, all_preds)
     mcc = metrics.matthews_corrcoef(all_trues, all_preds)
